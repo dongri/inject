@@ -47,6 +47,7 @@ input::placeholder {
   flex: 1;
   text-align: center;
   font-size: 30px;
+  font-weight: bold;
 }
 .header-title {
   font-size: 20px;
@@ -87,6 +88,7 @@ input::placeholder {
   width: calc(100% - 22px);
   height: 100px;
   padding: 10px;
+  font-size: 16px;
 }
 #message::placeholder {
   color: #bbb;
