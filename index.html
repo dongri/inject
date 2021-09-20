@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>inject</title>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.3-rc.0/web3.min.js'></script>
+    <script type="text/javascript" src='./js/main.js'></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-left"></div>
+        <div class="header-center">
+          inject
+        </div>
+        <div class="header-right">
+          <div class="header-account">
+            <div id="wallet-connect">
+              <button onclick="connectWallet();">Connect wallet</button>
+            </div>
+            <div id="wallet-account">
+              <span id="account-network-main"></span>
+              <span id="account-network-rinkeby"></span>
+              <span id="account-network-error"></span>
+              <span id="account-address"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="description">
+          Let's create a fully on-chain NFT.
+        </div>
+        <div class="mint" id="mint">
+          <div class="content-message">
+            <div id="fork-from"></div>
+            <input type="hidden" id="fork-token-id" value="0">
+            <textarea id="message" placeholder="input message (can use HTML tags)"></textarea>
+          </div>
+          <div class="content-preview">
+            Check the svg file to be generated
+            <button onclick="preview();" id="button-preview">Preview</button>
+          </div>
+          <div class="content-mint">
+            Write to the blockchain.
+            <button onclick="mintToken();" id="button-mint">Mint Token</button>
+            <span id="etherscan"></span>
+          </div>
+        </div>
+        <div class="fork">
+          <div class="search">
+            Fork <input type="text" id="search-token-id" placeholder="Token ID" />
+            <button onclick="searchToken();">Search</button>
+            <div id="loading">
+              Searching...
+            </div>
+            <div id="search-result">
+              <span id="token-name"></span>
+              <button onclick="fork();">Fork</button>
+              <div class="token-image">
+                <img src="" id="token-image" width="400px"/>
+              </div>
+            </div>
+            <div id="not-found">
+              Not found
+            </div>
+          </div>
+        </div>
+        <div class="links">
+          <a href="https://opensea.io/collection/inject" target="_blank">OpenSea</a>
+          &nbsp;
+          <a href="https://github.com/dongri/inject" target="_blank">Github</a>
+          &nbsp;
+          <a href="https://opensea.io/collections/inject" target="_blank">Contract</a>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="copyright">
+          inject &copy; 2021
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

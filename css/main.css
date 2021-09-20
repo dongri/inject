@@ -1,0 +1,147 @@
+html body {
+  font-family: monospace;
+  font-size: x-large;
+}
+button {
+  cursor: pointer;
+  font-family: monospace;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  background-color: #fff;
+  font-size: x-large;
+}
+textarea {
+  font-family: monospace;
+  font-size: x-large;
+}
+a {
+  color: #555;
+}
+input {
+  font-family: monospace;
+  font-size: x-large;
+  padding: 5px;
+}
+input::placeholder {
+  color: #999;
+  font-size: large;
+  padding: 5px;
+}
+.container {
+  width: 100%;
+}
+.header {
+  display: flex;
+  margin: 20px;
+}
+.header-left {
+  flex: 1;
+  text-align: left;
+}
+.header-right {
+  flex: 1;
+  text-align: right;
+}
+.header-center {
+  flex: 1;
+  text-align: center;
+  font-size: 30px;
+}
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.content {
+  width: 580px;
+  margin: auto;
+  margin-top: 50px;
+}
+.description {
+  text-align: left;
+}
+#wallet-connect {
+  display: none;
+}
+#wallet-account {
+  display: none;
+}
+#account-network-main {
+  color: green;
+  font-weight: bold;
+}
+#account-network-rinkeby {
+  color: orange;
+  font-weight: bold;
+}
+#account-network-error {
+  color: red;
+  font-weight: bold;
+}
+#fork-from {
+  display: none;
+  color: darkorange;
+  margin-bottom: 5px;
+}
+#message {
+  width: calc(100% - 22px);
+  height: 100px;
+  padding: 10px;
+}
+#message::placeholder {
+  color: #bbb;
+}
+.content-message {
+  margin: 20px 0;
+}
+.content-preview {
+  margin: 20px 0;
+}
+.content-mint {
+  margin: 20px 0;
+}
+#etherscan {
+  margin-top: 20px;
+}
+.fork {
+  margin: 40px 0;
+}
+.links {
+  margin: 50px;
+  text-align: center;
+}
+#search-token-id {
+  width: 399px;
+}
+#loading {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+#search-result {
+  display: none;
+  margin-top: 30px;
+  text-align: center;
+}
+#not-found {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+#token-name {
+  margin-bottom: 20px;
+}
+.token-image {
+  margin-top: 20px;
+}
+#token-image {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+
+.footer {
+  margin: 50px 0px 50px 0;
+  text-align: center;
+  font-size: 14px;
+}
