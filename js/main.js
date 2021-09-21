@@ -67,7 +67,6 @@ disable = () => {
   document.getElementById('button-mint').disabled = true;
 
   document.getElementById('fork-from').style.display = 'none';
-  document.getElementById('message').value = '';
   document.getElementById('search-token-id').value = '';
   document.getElementById('search-result').style.display = 'none';
   document.getElementById('not-found').style.display = 'none';
