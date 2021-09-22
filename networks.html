@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>inject</title>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/web3/1.5.3-rc.0/web3.min.js'></script>
+    <script type="text/javascript" src='./js/main.js'></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-left">
+          <a href="./index.html">
+            <img src="./img/logo.png" alt="logo" class="logo">
+          </a>
+        </div>
+        <div class="header-center">
+          inject
+        </div>
+        <div class="header-right">
+          <a href="./index.html">Back</a>
+        </div>
+      </div>
+      <div class="networks">
+        <button onclick="changeCustomNetwork('ethereum-mainnet'); return false;" class="network-btn ethereum">
+          Switch to Ethereum Mainnet
+        </button>
+        <table class="table">
+          <tbody>
+          <tr>
+          <th>Network Name</th>
+          <td>Ethereum Mainnet</td>
+          </tr>
+          <tr>
+          <th>RPC URL</th>
+          <td>https://mainnet.infura.io/v3/undefined</td>
+          </tr>
+          <tr>
+          <th>Chain ID</th>
+          <td>1</td>
+          </tr>
+          <tr>
+          <th>Symbol</th>
+          <td>ETH</td>
+          </tr>
+          <tr>
+          <th>Block Explorer URL</th>
+          <td><a href="https://etherscan.io" target="_blank">https://etherscan.io</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <button onclick="changeCustomNetwork('ethereum-rinkeby'); return false;" class="network-btn rinkeby">
+          Switch to Ethereum Rinkeby
+        </button>
+        <table class="table">
+          <tbody>
+          <tr>
+          <th>Network Name</th>
+          <td>Ethereum Rinkeby</td>
+          </tr>
+          <tr>
+          <th>RPC URL</th>
+          <td>https://rinkeby.infura.io/v3/undefined</td>
+          </tr>
+          <tr>
+          <th>Chain ID</th>
+          <td>4</td>
+          </tr>
+          <tr>
+          <th>Symbol</th>
+          <td>ETH</td>
+          </tr>
+          <tr>
+          <th>Block Explorer URL</th>
+          <td><a href="https://rinkeby.etherscan.io" target="_blank">https://rinkeby.etherscan.io</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <button onclick="changeCustomNetwork('polygon-mainnet'); return false;" class="network-btn polygon">
+          Switch to Polygon Mainnet
+        </button>
+        <table class="table">
+          <tbody>
+          <tr>
+          <th>Network Name</th>
+          <td>Polygon Mainnet</td>
+          </tr>
+          <tr>
+          <th>RPC URL</th>
+          <td>https://rpc-mainnet.maticvigil.com</td>
+          </tr>
+          <tr>
+          <th>Chain ID</th>
+          <td>137</td>
+          </tr>
+          <tr>
+          <th>Symbol</th>
+          <td>MATIC</td>
+          </tr>
+          <tr>
+          <th>Block Explorer URL</th>
+          <td><a href="https://polygonscan.com" target="_blank">https://polygonscan.com</a></td>
+          </tr>
+          <tr>
+          <th>Official docs</th>
+          <td><a href="https://docs.polygon.technology/docs/develop/network-details/network" target="_blank">https://docs.polygon.technology/docs/develop/network-details/network</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <button onclick="changeCustomNetwork('polygon-testnet'); return false;" class="network-btn polygon-testnet">
+          Switch to Polygon Mumbai
+        </button>
+        <table class="table">
+          <tbody>
+          <tr>
+          <th>Network Name</th>
+          <td>Polygon Mumbai</td>
+          </tr>
+          <tr>
+          <th>RPC URL</th>
+          <td>https://rpc-mumbai.maticvigil.com</td>
+          </tr>
+          <tr>
+          <th>Chain ID</th>
+          <td>80001</td>
+          </tr>
+          <tr>
+          <th>Symbol</th>
+          <td>MATIC</td>
+          </tr>
+          <tr>
+          <th>Block Explorer URL</th>
+          <td><a href="https://mumbai.polygonscan.com" target="_blank">https://mumbai.polygonscan.com</a></td>
+          </tr>
+          <tr>
+          <th>Official docs</th>
+          <td><a href="https://docs.polygon.technology/docs/develop/network-details/network" target="_blank">https://docs.polygon.technology/docs/develop/network-details/network</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <button onclick="changeCustomNetwork('bsc-mainnet'); return false;" class="network-btn bsc">
+          Switch to BSC Mainnet
+        </button>
+        <table class="table">
+          <tbody>
+          <tr>
+          <th>Network Name</th>
+          <td>BSC Mainnet</td>
+          </tr>
+          <tr>
+          <th>RPC URL</th>
+          <td>https://bsc-dataseed.binance.org</td>
+          </tr>
+          <tr>
+          <th>Chain ID</th>
+          <td>56</td>
+          </tr>
+          <tr>
+          <th>Symbol</th>
+          <td>BNB</td>
+          </tr>
+          <tr>
+          <th>Block Explorer URL</th>
+          <td><a href="https://bscscan.com" target="_blank">https://bscscan.com</a></td>
+          </tr>
+          <tr>
+          <th>Official docs</th>
+          <td><a href="https://docs.binance.org/smart-chain/developer/rpc.html" target="_blank">https://docs.binance.org/smart-chain/developer/rpc.html</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <button onclick="changeCustomNetwork('bsc-testnet'); return false;" class="network-btn bsc-testnet">
+          Switch to BSC Testnet
+        </button>
+        <table class="table">
+          <tbody>
+          <tr>
+          <th>Network Name</th>
+          <td>BSC Testnet</td>
+          </tr>
+          <tr>
+          <th>RPC URL</th>
+          <td>https://data-seed-prebsc-1-s1.binance.org:8545</td>
+          </tr>
+          <tr>
+          <th>Chain ID</th>
+          <td>97</td>
+          </tr>
+          <tr>
+          <th>Symbol</th>
+          <td>BNB</td>
+          </tr>
+          <tr>
+          <th>Block Explorer URL</th>
+          <td><a href="https://testnet.bscscan.com" target="_blank">https://testnet.bscscan.com</a></td>
+          </tr>
+          <tr>
+          <th>Official docs</th>
+          <td><a href="https://docs.binance.org/smart-chain/developer/rpc.html" target="_blank">https://docs.binance.org/smart-chain/developer/rpc.html</a></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="footer">
+        <div class="copyright">
+          inject &copy; 2021
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -9,7 +9,11 @@
   <body>
     <div class="container">
       <div class="header">
-        <div class="header-left"></div>
+        <div class="header-left">
+          <a href="./index.html">
+            <img src="./img/logo.png" alt="logo" class="logo">
+          </a>
+        </div>
         <div class="header-center">
           inject
         </div>
@@ -19,9 +23,7 @@
               <button onclick="connectWallet();">Connect wallet</button>
             </div>
             <div id="wallet-account">
-              <span id="account-network-main"></span>
-              <span id="account-network-rinkeby"></span>
-              <span id="account-network-error"></span>
+              <a href="./networks.html"><span id="account-network"></span></a>
               <span id="account-address"></span>
             </div>
           </div>
@@ -54,8 +56,8 @@
         </div>
         <div class="fork">
           <div class="search">
-            Fork <input type="text" id="search-token-id" placeholder="Token ID" />
-            <button onclick="searchToken();">Search</button>
+            Fork # <input type="text" id="search-token-id" placeholder="Token ID" />
+            <button onclick="searchToken();" id="button-search">Search</button>
             <div id="loading">
               Searching...
             </div>

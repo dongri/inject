@@ -39,6 +39,10 @@ input::placeholder {
   flex: 1;
   text-align: left;
 }
+.header-left .logo {
+  border-radius: 50%;
+  width: 30px;
+}
 .header-right {
   flex: 1;
   text-align: right;
@@ -67,16 +71,7 @@ input::placeholder {
 #wallet-account {
   display: none;
 }
-#account-network-main {
-  color: green;
-  font-weight: bold;
-}
-#account-network-rinkeby {
-  color: orange;
-  font-weight: bold;
-}
-#account-network-error {
-  color: red;
+#account-network {
   font-weight: bold;
 }
 #fork-from {
@@ -113,7 +108,7 @@ input::placeholder {
   text-align: center;
 }
 #search-token-id {
-  width: 390px;
+  width: 370px;
 }
 #loading {
   display: none;
@@ -146,4 +141,46 @@ input::placeholder {
   margin: 50px 0px 50px 0;
   text-align: center;
   font-size: 14px;
+}
+
+.network-btn {
+  color: white;
+}
+
+.networks {
+  width: 715px;
+  margin: auto;
+  margin-top: 50px;
+}
+.ethereum {
+  background: green;
+}
+.rinkeby {
+  background: orange;
+}
+.polygon {
+  background: DarkViolet;
+}
+.polygon-testnet {
+  background: DarkGoldenRod;
+}
+.bsc {
+  background: GoldenRod;
+}
+.bsc-testnet {
+  background: Olive;
+}
+
+.table {
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.table th, td {
+  border-bottom: 1px solid #eee;
+  padding: 5px;
+}
+.table th {
+  width: 160px;
 }
