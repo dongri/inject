@@ -46,7 +46,7 @@ reload = async () => {
     document.body.classList.remove("dark-theme");
   }
 
-  // wallet status
+  // wallet
   let connected = localStorage.getItem('connected');
   if (connected) {
     let { web3, account, networkId } = await getWeb3();
