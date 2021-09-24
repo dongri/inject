@@ -8,85 +8,95 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css">
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="header-left">
-          <a href="./index.html">
-            <img src="./img/logo.png" alt="logo" class="logo">
-          </a>
-        </div>
-        <div class="header-center">
-          inject
-        </div>
-        <div class="header-right">
-          <div class="header-account">
-            <div id="wallet-connect">
-              <button onclick="connectWallet();">Connect wallet</button>
-            </div>
-            <div id="wallet-account">
-              <a href="./networks.html"><span id="account-network"></span></a>
-              <span id="account-address"></span>
-            </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="header">
+          <div class="header-left">
+            <a href="./index.html">
+              <img src="./img/logo.png" alt="logo" class="logo">
+            </a>
           </div>
+          <div class="header-center">
+            inject
+          </div>
+          <div class="header-right">
+            <div class="header-account">
+              <div id="wallet-connect">
+                <button onclick="connectWallet();">Connect wallet</button>
+              </div>
+              <div id="wallet-account">
+                <a href="./networks.html"><span id="account-network"></span></a>
+                <span id="account-address"></span>
+              </div>
+            </div>
+            <div class="header-theme">
+              <div id="theme-dark" onclick="setDarkMode(false);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              </div>
+              <div id="theme-light" onclick="setDarkMode(true);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              </div>
+            </div>
+          </div>          
         </div>
-      </div>
-      <div class="content">
-        <div class="description">
-          Let's create a fully on-chain NFT.
-        </div>
-        <div class="mint" id="mint">
-          <div class="content-message">
-            <div id="fork-from"></div>
-            <input type="hidden" id="fork-token-id" value="0">
-            <textarea id="message" placeholder="input message (can use HTML tags)">
+        <div class="content">
+          <div class="description">
+            Let's create a fully on-chain NFT.
+          </div>
+          <div class="mint" id="mint">
+            <div class="content-message">
+              <div id="fork-from"></div>
+              <input type="hidden" id="fork-token-id" value="0">
+              <textarea id="message" placeholder="input message (can use HTML tags)">
 <div style="height: 350px; background: black; display: flex; align-items: center; justify-content: center; color: white;">
 
 <h1>Hello World</h1>
 
 </div></textarea>
-          </div>
-          <div class="content-preview">
-            Check the svg file to be generated
-            <button onclick="preview();" id="button-preview">Preview</button>
-          </div>
-          <div class="content-mint">
-            Write to the blockchain.
-            <button onclick="mintToken();" id="button-mint">Mint Token</button>
-            <span id="etherscan"></span>
-          </div>
-        </div>
-        <div class="fork">
-          <div class="search">
-            Fork # <input type="text" id="search-token-id" placeholder="Token ID" />
-            <button onclick="searchToken();" id="button-search">Search</button>
-            <div id="loading">
-              Searching...
             </div>
-            <div id="search-result">
-              <span id="token-name"></span>
-              <button onclick="fork();">Fork</button>
-              <div class="token-image">
-                <img src="" id="token-image" width="400px"/>
+            <div class="content-preview">
+              Check the svg file to be generated
+              <button onclick="preview();" id="button-preview">Preview</button>
+            </div>
+            <div class="content-mint">
+              Write to the blockchain.
+              <button onclick="mintToken();" id="button-mint">Mint Token</button>
+              <span id="etherscan"></span>
+            </div>
+          </div>
+          <div class="fork">
+            <div class="search">
+              Fork # <input type="text" id="search-token-id" placeholder="Token ID" />
+              <button onclick="searchToken();" id="button-search">Search</button>
+              <div id="loading">
+                Searching...
+              </div>
+              <div id="search-result">
+                <span id="token-name"></span>
+                <button onclick="fork();">Fork</button>
+                <div class="token-image">
+                  <img src="" id="token-image" width="400px"/>
+                </div>
+              </div>
+              <div id="not-found">
+                Not found
               </div>
             </div>
-            <div id="not-found">
-              Not found
-            </div>
           </div>
-        </div>
-        <div class="links">
-          <a href="https://opensea.io/collection/injectproject" target="_blank">OpenSea</a>
-          &nbsp;
-          <a href="https://github.com/dongri/inject" target="_blank">Github</a>
-          &nbsp;
-          <a href="https://etherscan.io/address/0x80f85b92825f4ee243c03d7d9a07a6d6ff503751#code" target="_blank">Contract</a>
-        </div>
-      </div>
-      <div class="footer">
-        <div class="copyright">
-          inject &copy; 2021
+          <div class="links">
+            <a href="https://opensea.io/collection/injectproject" target="_blank">OpenSea</a>
+            &nbsp;
+            <a href="https://github.com/dongri/inject" target="_blank">Github</a>
+            &nbsp;
+            <a href="https://etherscan.io/address/0x80f85b92825f4ee243c03d7d9a07a6d6ff503751#code" target="_blank">Contract</a>
+          </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="copyright">
+        inject &copy; 2021
+      </div>
+    </footer>
   </body>
 </html>

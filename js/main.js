@@ -5,6 +5,11 @@ window.onload = async() => {
   await reload();
 }
 
+setDarkMode = async(darkMode) => {
+  localStorage.setItem('dark_mode', darkMode);
+  await reload();
+}
+
 try {
   window.ethereum.on('accountsChanged', async(accounts) => {
     await walletChanged()
@@ -21,6 +26,27 @@ walletChanged = async () => {
 };
 
 reload = async () => {
+  // theme 
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const darkMode = localStorage.getItem('dark_mode');
+  let isDarkMode = false;
+  if (darkMode !== null) {
+    isDarkMode = JSON.parse(darkMode);
+  } else {
+    isDarkMode = prefersDarkScheme.matches;
+  }
+  console.log(isDarkMode);
+  if (isDarkMode === true) {
+    $('theme-dark').style.display = 'block';
+    $('theme-light').style.display = 'none';
+    document.body.classList.add("dark-theme");
+  } else {
+    $('theme-dark').style.display = 'none';
+    $('theme-light').style.display = 'block';
+    document.body.classList.remove("dark-theme");
+  }
+
+  // wallet status
   let connected = localStorage.getItem('connected');
   if (connected) {
     let { web3, account, networkId } = await getWeb3();

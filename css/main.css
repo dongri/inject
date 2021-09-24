@@ -1,7 +1,35 @@
-html body {
+.dark-theme {
+  filter: invert(1) hue-rotate(180deg);
+}
+.dark-theme img {
+  filter: invert(1) hue-rotate(360deg);
+}
+
+body {
   font-family: monospace;
   font-size: x-large;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
 }
+.wrapper{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+footer{
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  position: absolute;
+  bottom: 0;
+  font-size: large;
+}
+
 button {
   cursor: pointer;
   font-family: monospace;
@@ -29,11 +57,12 @@ input::placeholder {
   padding: 5px;
 }
 .container {
-  width: 100%;
+  padding: 0 20px;
+  background-color: #fff;
 }
 .header {
   display: flex;
-  margin: 20px;
+  padding-top: 20px;
 }
 .header-left {
   flex: 1;
@@ -74,6 +103,19 @@ input::placeholder {
 #account-network {
   font-weight: bold;
 }
+.header-theme {
+  margin-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+#theme-dark {
+  display: none;
+}
+#theme-light {
+  display: none;
+}
+
 #fork-from {
   display: none;
   color: darkorange;
@@ -136,21 +178,14 @@ input::placeholder {
   border-radius: 5px;
   border: 1px solid #999;
 }
-
-.footer {
-  margin: 50px 0px 50px 0;
-  text-align: center;
-  font-size: 14px;
-}
-
 .network-btn {
   color: white;
 }
-
 .networks {
   width: 715px;
   margin: auto;
   margin-top: 50px;
+  background-color: white;
 }
 .ethereum {
   background: green;
